@@ -56,5 +56,5 @@ jobs:
           
       - name: Push appointment-service Docker image to ECR
         run: |
-          docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_REPOSITORY_AS:$IMAGE_TAGname: Build and Push Docker Image to EC
+          docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_REPOSITORY_AS:$IMAGE_TAG
     
