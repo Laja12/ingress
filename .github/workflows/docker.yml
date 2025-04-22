@@ -31,7 +31,7 @@ jobs:
         ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY }}
         IMAGE_TAG: ${{ env.IMAGE_TAG }}
       run: |
-        docker build -t $ECR_REPOSITORY:$IMAGE_TAG Dockerfile1
+        docker build -t $ECR_REPOSITORY:$IMAGE_TAG Dockerfile_appointment
         docker tag $ECR_REPOSITORY:$IMAGE_TAG $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
