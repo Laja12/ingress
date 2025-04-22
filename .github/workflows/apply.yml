@@ -1,4 +1,4 @@
-name: open-project
+name: eks-cluster
 
 on:
   workflow_dispatch:
