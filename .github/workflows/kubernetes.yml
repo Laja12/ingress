@@ -1,4 +1,4 @@
-name: k8s
+name: kubernetes_deployment
 on:
   workflow_dispatch:
  
