@@ -31,11 +31,11 @@ jobs:
         ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY }}
         IMAGE_TAG: ${{ env.IMAGE_TAG }}
       run: |
-        docker build -t $ECR_REPOSITORY:$IMAGE_TAG app/appointment-service/dockerfile_appointment
+        docker build -t $ECR_REPOSITORY:$IMAGE_TAG -f appointment-service/dockerfile_appointment
         docker tag $ECR_REPOSITORY:$IMAGE_TAG $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
-        docker build -t $ECR_REPOSITORY:$IMAGE_TAG app/patient-service/dockerfile_patient
+        docker build -t $ECR_REPOSITORY:$IMAGE_TAG -f patient-service/dockerfile_patient
         docker tag $ECR_REPOSITORY:$IMAGE_TAG $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
