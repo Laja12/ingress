@@ -35,7 +35,7 @@ jobs:
         docker tag $ECR_REPOSITORY:$IMAGE_TAG $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
-        docker build -t $ECR_REPOSITORY:$IMAGE_TAG Dockerfile2
+        docker build -t $ECR_REPOSITORY:$IMAGE_TAG Dockerfile_patient
         docker tag $ECR_REPOSITORY:$IMAGE_TAG $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
